@@ -4,6 +4,7 @@ import HomeScreen from "../screens/HomeScreen";
 import WatchlistScreen from "../screens/WatchlistScreen";
 import PortfolioScreen from "../screens/PortfolioScreen";
 import { Entypo, FontAwesome, Foundation } from "@expo/vector-icons";
+import SignalScreen from "../screens/SignalScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -30,6 +31,15 @@ const BottomTabNavigator = () => {
         }}
       />
       <Tab.Screen
+        name="Signals"
+        component={SignalScreen}
+        options={{
+          tabBarIcon: ({ focused, color }) => (
+            <FontAwesome name="signal" size={focused ? 35 : 30} color={color} />
+          ),
+        }}
+      />{/* 
+      <Tab.Screen
         name="Portfolio"
         component={PortfolioScreen}
         options={{
@@ -37,7 +47,7 @@ const BottomTabNavigator = () => {
             <Foundation name="graph-pie" size={focused ? 35 : 30} color={color} />
           ),
         }}
-      />
+      /> */}
       <Tab.Screen
         name="Watchlist"
         component={WatchlistScreen}

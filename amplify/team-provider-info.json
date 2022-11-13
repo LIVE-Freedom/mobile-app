@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-bmakerapp-staging-23033-authRole",
+      "UnauthRoleArn": "arn:aws:iam::383333479832:role/amplify-bmakerapp-staging-23033-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::383333479832:role/amplify-bmakerapp-staging-23033-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-bmakerapp-staging-23033-deployment",
+      "UnauthRoleName": "amplify-bmakerapp-staging-23033-unauthRole",
+      "StackName": "amplify-bmakerapp-staging-23033",
+      "StackId": "arn:aws:cloudformation:us-east-1:383333479832:stack/amplify-bmakerapp-staging-23033/263479c0-62fb-11ed-a6df-0ec5afcb98db",
+      "AmplifyAppId": "dq6h8wv08lw7y"
+    },
+    "categories": {
+      "auth": {
+        "bmakerapp": {}
+      }
+    }
+  }
+}
