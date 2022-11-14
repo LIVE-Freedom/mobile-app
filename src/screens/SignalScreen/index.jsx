@@ -38,9 +38,9 @@ const SignalScreen = () => {
         {/* <Text style={{color: 'lightgrey', fontSize: 12, paddingHorizontal: 10}}>Powered by Juanes y Laura</Text> */}
       </View>
       <FlatList
-      ListHeaderComponent={<Text>Signals</Text>}
+      ListHeaderComponent={<Text style={{color:'white'}}>Signals</Text>}
         data={coins}
-        renderItem={({ item }) => <Text>@ Pip Grabber New Order - NZDCAD Sell @ 0.80145</Text>}
+        renderItem={({ item }) => <Text style={{color:'white'}}>@ Pip Grabber New Order - NZDCAD Sell @ 0.80145</Text>}
         onEndReached={() => fetchCoins(coins.length / 50 + 1)}
         refreshControl={
           <RefreshControl
