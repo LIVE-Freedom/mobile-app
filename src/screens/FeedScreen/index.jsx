@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from "react";
-import CoinItem from "../../components/CoinItem";
-import { getMarketData } from "../../services/requests";
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -9,20 +7,19 @@ import {
   ImageBackground,
   TextInput,
   TouchableOpacity,
-  FlatList, RefreshControl
 } from 'react-native';
-
 import Carousel from 'react-native-snap-carousel';
 import Feather from 'react-native-vector-icons/Feather';
 
+
 import {windowWidth} from '../../utils/Dimensions';
 
-import {freeGames, paidGames, sliderData} from '../../model/data';
-import CustomSwitchSignals from '../../components/CustomSwitchSignals';
-import ListItemSignal from '../../components/ListItemSignal';
-import BannerSlider from "../../components/BannerSlider";
+import {freeGames, paidGames, sliderData} from '../model/data';
+import CustomSwitch from '../../components/CustomSwitch';
+import ListItem from '../../components/ListItem';
+import BannerSlider from '../../components/BannerSlider';
 
-export default function SignalScreen({navigation}) {
+export default function HomeScreen({navigation}) {
   const [gamesTab, setGamesTab] = useState(1);
 
   const renderBanner = ({item, index}) => {
@@ -32,33 +29,6 @@ export default function SignalScreen({navigation}) {
   const onSelectSwitch = value => {
     setGamesTab(value);
   };
-
-  const [coins, setCoins] = useState([]);
-  const [loading, setLoading] = useState(false);
-
-  const fetchCoins = async (pageNumber) => {
-    if (loading) {
-      return;
-    }
-    setLoading(true);
-    const coinsData = await getMarketData(pageNumber);
-    setCoins((existingCoins) => [...existingCoins, ...coinsData]);
-    setLoading(false);
-  };
-
-  const refetchCoins = async () => {
-    if (loading) {
-      return;
-    }
-    setLoading(true);
-    const coinsData = await getMarketData();
-    setCoins(coinsData);
-    setLoading(false);
-  };
-
-  useEffect(() => {
-    fetchCoins();
-  }, []);
 
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
@@ -70,30 +40,14 @@ export default function SignalScreen({navigation}) {
             marginBottom: 20,
           }}>
           <Text style={{fontSize: 18, fontFamily: 'Roboto-Medium'}}>
-            BMaker | Best Trading
+            Hello John Doe
           </Text>
           <TouchableOpacity onPress={() => navigation.openDrawer()}>
             <ImageBackground
-              source={require('../../../assets/images/user-profile.jpg')}
+              source={require('../assets/images/user-profile.jpg')}
               style={{width: 35, height: 35}}
               imageStyle={{borderRadius: 25}}
             />
-          </TouchableOpacity>
-        </View>
-
-        
-
-        <View
-          style={{
-            marginVertical: 8,
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-          }}>
-          <Text style={{fontSize: 18, fontFamily: 'Roboto-Medium'}}>
-            Last Signals
-          </Text>
-          <TouchableOpacity onPress={() => {}}>
-            <Text style={{color: '#0aada8'}}>Show filters</Text>
           </TouchableOpacity>
         </View>
 
@@ -112,29 +66,51 @@ export default function SignalScreen({navigation}) {
             color="#C6C6C6"
             style={{marginRight: 5}}
           />
-          <TextInput placeholder="Search Signal" />
+          <TextInput placeholder="Search" />
         </View>
 
+        <View
+          style={{
+            marginVertical: 15,
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+          }}>
+          <Text style={{fontSize: 18, fontFamily: 'Roboto-Medium'}}>
+            Upcoming Games
+          </Text>
+          <TouchableOpacity onPress={() => {}}>
+            <Text style={{color: '#0aada8'}}>See all</Text>
+          </TouchableOpacity>
+        </View>
+
+        <Carousel
+          ref={c => {
+            this._carousel = c;
+          }}
+          data={sliderData}
+          renderItem={renderBanner}
+          sliderWidth={windowWidth - 40}
+          itemWidth={300}
+          loop={true}
+        />
 
         <View style={{marginVertical: 20}}>
-          <CustomSwitchSignals
+          <CustomSwitch
             selectionMode={1}
-            option1="Open Signals"
-            option2="Closed Signals"
+            option1="Free to play"
+            option2="Paid games"
             onSelectSwitch={onSelectSwitch}
           />
         </View>
 
-        
-
         {gamesTab == 1 &&
           freeGames.map(item => (
-            <ListItemSignal
+            <ListItem
               key={item.id}
               photo={item.poster}
-              title={"Price @20 Pips"}
-              subTitle={"NZD CAD"}
-              isFree={Math.random()==1 ? 'Yes' : 'No'}
+              title={item.title}
+              subTitle={item.subtitle}
+              isFree={item.isFree}
               onPress={() =>
                 navigation.navigate('GameDetails', {
                   title: item.title,
@@ -145,10 +121,10 @@ export default function SignalScreen({navigation}) {
           ))}
         {gamesTab == 2 &&
           paidGames.map(item => (
-            <ListItemSignal
+            <ListItem
               key={item.id}
               photo={item.poster}
-              title={"item.title"}
+              title={item.title}
               subTitle={item.subtitle}
               isFree={item.isFree}
               price={item.price}
@@ -164,8 +140,3 @@ export default function SignalScreen({navigation}) {
     </SafeAreaView>
   );
 }
-
-
-
-
-

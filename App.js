@@ -2,7 +2,9 @@ import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet, View, ActivityIndicator } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
-import Navigation from "./src/navigation";
+import Navigation from "./src/navigation/index";
+import AppStack from "./src/navigation/AppStack";
+
 import WatchlistProvider from "./src/Contexts/WatchlistContext";
 import { RecoilRoot } from 'recoil'
 import { useFonts, Inter_900Black } from '@expo-google-fonts/inter';
@@ -28,8 +30,10 @@ export default function App() {
       <RecoilRoot>
        <WatchlistProvider>
         <View style={styles.container}>
-          <Navigation />
-          <StatusBar style="light" />
+          {/* <Navigation /> */}
+          <AppStack/>
+
+          <StatusBar style="dark" />
         </View>
       </WatchlistProvider>
       </RecoilRoot>

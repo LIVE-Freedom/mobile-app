@@ -1,12 +1,21 @@
-import React from "react";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import React from 'react';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
+
 import HomeScreen from "../screens/HomeScreen";
 import WatchlistScreen from "../screens/WatchlistScreen";
 import PortfolioScreen from "../screens/PortfolioScreen";
+
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import Feather from 'react-native-vector-icons/Feather';
+
 import { Entypo, FontAwesome, Foundation } from "@expo/vector-icons";
 import SignalScreen from "../screens/SignalScreen";
 
 const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
+
 
 const BottomTabNavigator = () => {
   return (
