@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "ELFO | Tester App",
-    "slug": "elfo-tester",
+    "name": "LIVE Freedom | App",
+    "slug": "live-freedom-app",
     "version": "1.0.3",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#03CFB3"
+      "backgroundColor": "#3182ce"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -18,15 +18,15 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.elfo.tester",
+      "bundleIdentifier": "com.live.freedom",
       "buildNumber": "7"
     },
     "android": {
-      "package": "com.elfo.tester",
+      "package": "com.live.freedom",
       "versionCode": 5,
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon.png",
-        "backgroundColor": "#03CFB3"
+        "backgroundColor": "#3182ce"
       }
     },
     "web": {

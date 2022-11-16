@@ -34,7 +34,7 @@ const HomeScreen = () => {
   return (
     <View>
       <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
-        <Text style={{ fontFamily: 'DroidSans', color: "white", fontSize: 25, letterSpacing: 1, paddingHorizontal: 20, paddingBottom: 5 }}>Elfo Toys | App Tester</Text>
+        <Text style={{ fontFamily: 'DroidSans', color: "white", fontSize: 25, letterSpacing: 1, paddingHorizontal: 20, paddingBottom: 5 }}>LIVE Freedom | Signals App</Text>
         {/* <Text style={{color: 'lightgrey', fontSize: 12, paddingHorizontal: 10}}>Powered by Juanes y Laura</Text> */}
         </View>
       <FlatList

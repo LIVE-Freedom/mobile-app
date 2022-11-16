@@ -39,7 +39,7 @@ export default function HomeScreen({navigation}) {
             marginBottom: 20,
           }}>
           <Text style={{fontSize: 18, fontFamily: 'RobotoMedium'}}>
-            Hello Pablo!
+            Hello Massiel!
           </Text>
           <TouchableOpacity onPress={() => navigation.openDrawer()}>
             <ImageBackground

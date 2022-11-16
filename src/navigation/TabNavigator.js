@@ -56,7 +56,7 @@ const TabNavigator = () => {
         tabBarShowLabel: true,
         tabBarStyle: {backgroundColor: '#000000'},
         tabBarInactiveTintColor: '#fff',
-        tabBarActiveTintColor: '#03CFB3',
+        tabBarActiveTintColor: '#3182ce',
         tabBarLabelStyle:{paddingVertical:3}
       }}
       >
@@ -85,14 +85,13 @@ const TabNavigator = () => {
           ),
       }}/>
       <Tab.Screen
-        name="Connect"
+        name="Subscription"
         component={ConnectScreen}
         options={{
-          // tabBarBadge: 1,
-          tabBarBadgeStyle: {backgroundColor: '#03CFB3'},
+          tabBarBadge: 3,
+          tabBarBadgeStyle: {backgroundColor: '#3182ce'},
           tabBarIcon: ({color, size}) => (
-            <Image alt="vibrator"  source={require('../../assets/vibrator.png')}
-            style={{ width: 25, height: 25 }} />
+            <Feather name="shopping-bag" color={color} size={size} />
           ),
         }}
       />

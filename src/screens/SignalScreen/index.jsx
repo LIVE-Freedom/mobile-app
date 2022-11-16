@@ -70,7 +70,7 @@ export default function SignalScreen({navigation}) {
             marginBottom: 20,
           }}>
           <Text style={{fontSize: 18, fontFamily: 'RobotoMedium'}}>
-            Elfo Toys | Tips
+            LIVE Freedom | Forex Signals
           </Text>
           <TouchableOpacity onPress={() => navigation.openDrawer()}>
             <ImageBackground
