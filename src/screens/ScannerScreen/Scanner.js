@@ -1,10 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import { Text, View, StyleSheet, Button } from 'react-native'
 import { BarCodeScanner } from 'expo-barcode-scanner'
+import io from "socket.io-client";
+
 
 export default function Scanner(){
     const [hasPermission, setHasPermission] = useState(null);
     const [scanned, setScanned] = useState(false);
+
+    const [hasConnection, setConnection] = useState(false);
+  const [time, setTime] = useState(null);
+
+    const [URL, setURL] = useState('')
 
     useEffect(() => {
         (async () =>{
@@ -13,9 +20,32 @@ export default function Scanner(){
         })();
     }, []);
 
+    useEffect(function didMount() {
+        console.log('ROOM URL update, new one: ',URL);
+        
+        const socket = io(URL, {
+                    transports: ["websocket"],
+                });   
+        socket.io.on("open", () => setConnection(true));
+        socket.io.on("close", () => setConnection(false));
+    
+        socket.on("time-msg", (data) => {
+          setTime(new Date(data.time).toString());
+        });
+    
+        return function didUnmount() {
+          socket.disconnect();
+          socket.removeAllListeners();
+        }; 
+      }, [URL])
+    
+
+    
+
     const handleBarCodeScanner = ({type, data}) =>{
         setScanned(true);
-        alert(`Bar code with Type ${type} and data ${data} has been scanned`)
+        alert(`Trying to connect to room ${data}`)
+        setURL(data)
     }
 
     if (hasPermission===null){
