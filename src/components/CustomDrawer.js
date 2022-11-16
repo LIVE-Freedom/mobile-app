@@ -19,9 +19,9 @@ const CustomDrawer = props => {
     <View style={{flex: 1, height:'100%'}}>
       <DrawerContentScrollView
         {...props}
-        contentContainerStyle={{backgroundColor: '#ea6218', height:'100%'}}>
+        contentContainerStyle={{backgroundColor: '#03CFB3', height:'100%'}}>
         <ImageBackground
-          source={require('../../assets/images/menu-bg.webp')}
+          source={require('../../assets/images/menu-bg.png')}
           style={{padding: 20}}>
           <Image
             source={require('../../assets/images/user-profile.jpg')}

@@ -10,6 +10,7 @@ import GameDetailsScreen from '../screens/GameDetailsScreen/GameDetailsScreen';
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Feather from 'react-native-vector-icons/Feather';
+
 import SignalScreen from '../screens/SignalScreen';
 
 import { Entypo, FontAwesome, Foundation } from "@expo/vector-icons";
@@ -47,8 +48,10 @@ const TabNavigator = () => {
         tabBarShowLabel: true,
         tabBarStyle: {backgroundColor: '#000000'},
         tabBarInactiveTintColor: '#fff',
-        tabBarActiveTintColor: 'orange',
-      }}>
+        tabBarActiveTintColor: '#03CFB3',
+        tabBarLabelStyle:{paddingVertical:3}
+      }}
+      >
       <Tab.Screen
         name="Home"
         component={HomeStack}
@@ -63,24 +66,25 @@ const TabNavigator = () => {
         })}
       />
       <Tab.Screen
-        name="Signals"
+        name="Tips"
         component={SignalScreen}
         options={{
 /*           tabBarBadge: 3,
           tabBarBadgeStyle: {backgroundColor: 'black'}, */
           tabBarIcon: ({ focused, color }) => (
-            <Image alt="signal"  source={require('../../assets/icon.png')}
-            style={{ width: 50, height: 50, borderRadius:80 }} />
+            <Image alt="tips"  source={require('../../assets/icon.png')}
+            style={{ width: 50, height: 50, borderRadius:80, marginBottom:15 }} />
           ),
       }}/>
       <Tab.Screen
-        name="Subscription"
+        name="Connect Toy"
         component={CartScreen}
         options={{
-          tabBarBadge: 3,
-          tabBarBadgeStyle: {backgroundColor: 'orange'},
+          // tabBarBadge: 1,
+          tabBarBadgeStyle: {backgroundColor: '#03CFB3'},
           tabBarIcon: ({color, size}) => (
-            <Feather name="shopping-bag" color={color} size={size} />
+            <Image alt="vibrator"  source={require('../../assets/vibrator.png')}
+            style={{ width: 25, height: 25 }} />
           ),
         }}
       />

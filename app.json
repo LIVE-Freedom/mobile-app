@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "BMaker | Signal App",
-    "slug": "bmaker",
+    "name": "ELFO | Tester App",
+    "slug": "elfo-tester",
     "version": "1.0.3",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#000000"
+      "backgroundColor": "#03CFB3"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -18,15 +18,15 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.bmaker.app",
+      "bundleIdentifier": "com.elfo.tester",
       "buildNumber": "7"
     },
     "android": {
-      "package": "com.bmaker.app",
+      "package": "com.elfo.tester",
       "versionCode": 5,
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon.png",
-        "backgroundColor": "#29303A"
+        "backgroundColor": "#03CFB3"
       }
     },
     "web": {

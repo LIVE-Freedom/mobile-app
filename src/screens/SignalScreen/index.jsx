@@ -70,7 +70,7 @@ export default function SignalScreen({navigation}) {
             marginBottom: 20,
           }}>
           <Text style={{fontSize: 18, fontFamily: 'Roboto-Medium'}}>
-            BMaker | Best Trading
+            Elfo Toys | Tip Events
           </Text>
           <TouchableOpacity onPress={() => navigation.openDrawer()}>
             <ImageBackground
