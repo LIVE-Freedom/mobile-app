@@ -12,8 +12,8 @@ export default function ListItem({photo, title, subTitle, isFree, price, onPress
     }}>
       <View style={{flexDirection: 'row', alignItems: 'center', flex: 1}}>
         <Image
-          source={require('../../assets/icon.png')}
-          style={{width: 55, height: 55, borderRadius: 10, marginRight: 8}}
+          source={require('../../assets/vibrator.png')}
+          style={{width: 50, height: 50, borderRadius: 10, marginRight: 8}}
         />
         <View style={{width: windowWidth - 220}}>
           <Text

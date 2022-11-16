@@ -119,8 +119,8 @@ export default function SignalScreen({navigation}) {
         <View style={{marginVertical: 20}}>
           <CustomSwitchSignals
             selectionMode={1}
-            option1="Open Signals"
-            option2="Closed Signals"
+            option1="Chaturbate"
+            option2="Cam4"
             onSelectSwitch={onSelectSwitch}
           />
         </View>

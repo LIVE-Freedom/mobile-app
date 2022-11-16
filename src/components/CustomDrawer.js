@@ -43,7 +43,7 @@ const CustomDrawer = props => {
                 fontFamily: 'Roboto-Regular',
                 marginRight: 5,
               }}>
-              Earned by Refer: $50 USD
+              Tips in this session: 40
             </Text>
             <FontAwesome5 name="coins" size={14} color="#fff" />
           </View>
@@ -53,7 +53,7 @@ const CustomDrawer = props => {
         </View>
       </DrawerContentScrollView>
       <View style={{padding: 20, borderTopWidth: 1, borderTopColor: '#ccc', backgroundColor:'white' }}>
-        <TouchableOpacity onPress={() => {}} style={{paddingVertical: 15}}>
+        {/* <TouchableOpacity onPress={() => {}} style={{paddingVertical: 15}}>
           <View style={{flexDirection: 'row', alignItems: 'center'}}>
             <Ionicons name="share-social-outline" size={22} />
             <Text
@@ -65,7 +65,7 @@ const CustomDrawer = props => {
               Tell a Friend
             </Text>
           </View>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
         
         <TouchableOpacity onPress={() => {}} style={{paddingVertical: 15}}>
           <View style={{flexDirection: 'row', alignItems: 'center'}}>

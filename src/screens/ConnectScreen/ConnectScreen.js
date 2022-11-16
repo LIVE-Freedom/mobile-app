@@ -59,13 +59,13 @@ export default function ConnectScreen({navigation}) {
         <View style={{marginVertical: 20}}>
           <CustomSwitch
             selectionMode={1}
-            option1="Free to play"
-            option2="Paid games"
+            option1="Bluetooth"
+            option2="Wifi"
             onSelectSwitch={onSelectSwitch}
           />
         </View>
 
-        <View style={{justifyContent:'center', alignItems:'center', flexDirection:'column'}}>
+        <View style={{justifyContent:'center', alignItems:'center', flexDirection:'column', marginTop:50}}>
           <Image alt="qr" source={require('../../../assets/QR.png')} style={{width:250, height:250}}/>
           <TouchableOpacity onPress={()=>{navigation.navigate('Scanner')}}>
             <Text style={{color:'white', backgroundColor:'#03CFB3', padding:10, borderRadius:50, fontWeight:'bold', marginVertical:100}}>Scan QR</Text>

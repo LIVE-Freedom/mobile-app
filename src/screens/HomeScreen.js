@@ -75,7 +75,7 @@ export default function HomeScreen({navigation}) {
             justifyContent: 'space-between',
           }}>
           <Text style={{fontSize: 18, fontFamily: 'Roboto-Medium'}}>
-            Upcoming Games
+            Upcoming Apps
           </Text>
           <TouchableOpacity onPress={() => {}}>
             <Text style={{color: '#0aada8'}}>See all</Text>
