@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import { useNavigation } from '@react-navigation/native';
+
 import {
   View,
   Text,
@@ -20,6 +22,7 @@ import CustomSwitch from '../../components/CustomSwitch';
 import ListItem from '../../components/ListItem';
 
 export default function CartScreen({navigation}) {
+  
   const [gamesTab, setGamesTab] = useState(1);
 
   const renderBanner = ({item, index}) => {
@@ -63,7 +66,7 @@ export default function CartScreen({navigation}) {
 
         <View style={{justifyContent:'center', alignItems:'center', flexDirection:'column'}}>
           <Image alt="qr" source={require('../../../assets/QR.png')} style={{width:250, height:250}}/>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=>{navigation.navigate('Scanner')}}>
             <Text style={{color:'white', backgroundColor:'#03CFB3', padding:10, borderRadius:50, fontWeight:'bold', marginVertical:100}}>Scan QR</Text>
           </TouchableOpacity>
         </View>

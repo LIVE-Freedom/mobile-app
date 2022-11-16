@@ -15,6 +15,7 @@ import SignalScreen from '../screens/SignalScreen';
 
 import { Entypo, FontAwesome, Foundation } from "@expo/vector-icons";
 import { Image } from 'react-native';
+import Scanner from '../screens/ScannerScreen/Scanner';
 
 
 const Tab = createBottomTabNavigator();
@@ -31,6 +32,13 @@ const HomeStack = () => {
       <Stack.Screen
         name="GameDetails"
         component={GameDetailsScreen}
+        options={({route}) => ({
+          title: route.params?.title,
+        })}
+      />
+      <Stack.Screen
+        name="Scanner"
+        component={Scanner}
         options={({route}) => ({
           title: route.params?.title,
         })}
