@@ -39,8 +39,8 @@ export default function App() {
        <WatchlistProvider>
         <View style={styles.container}>
           {/* <Navigation /> */}
-          {/* <AppStack/> */}
-          <AuthStack/>
+          <AppStack/>
+          {/* <AuthStack/> */}
 
           <StatusBar style="dark" />
         </View>
