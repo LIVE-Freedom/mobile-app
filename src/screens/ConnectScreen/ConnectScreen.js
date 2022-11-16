@@ -21,7 +21,8 @@ import {freeGames, paidGames, sliderData} from '../../model/data';
 import CustomSwitch from '../../components/CustomSwitch';
 import ListItem from '../../components/ListItem';
 
-export default function CartScreen({navigation}) {
+export default function ConnectScreen({navigation}) {
+  
   
   const [gamesTab, setGamesTab] = useState(1);
 

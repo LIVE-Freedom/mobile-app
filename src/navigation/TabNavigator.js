@@ -4,7 +4,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 
 import HomeScreen from '../screens/HomeScreen';
-import CartScreen from '../screens/CartScreen/CartScreen';
+import ConnectScreen from '../screens/ConnectScreen/ConnectScreen';
 import FavoriteScreen from '../screens/FavoriteScreen/FavoriteScreen';
 import GameDetailsScreen from '../screens/GameDetailsScreen/GameDetailsScreen';
 
@@ -86,7 +86,7 @@ const TabNavigator = () => {
       }}/>
       <Tab.Screen
         name="Connect Toy"
-        component={CartScreen}
+        component={ConnectScreen}
         options={{
           // tabBarBadge: 1,
           tabBarBadgeStyle: {backgroundColor: '#03CFB3'},
