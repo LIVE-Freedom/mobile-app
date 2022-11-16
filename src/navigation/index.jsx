@@ -28,7 +28,7 @@ const Navigation = () => {
       drawerInactiveTintColor: '#333',
       drawerLabelStyle: {
         marginLeft: -25,
-        fontFamily: 'Roboto-Medium',
+        fontFamily: 'RobotoMedium',
         fontSize: 15,
       },
     }}>

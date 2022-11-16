@@ -1,39 +1,64 @@
 import React from 'react'
-import { SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
+import { SafeAreaView, View, Text, TouchableOpacity, Image } from 'react-native';
 
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Gaming from '../../../assets/images/misc/gaming.svg';
 
-const OnboardingScreen = ({navigation}) => {
+const OnBoardScreen = ({navigation}) => {
   return (
     <SafeAreaView
       style={{
         flex: 1,
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         alignItems: 'center',
-        backgroundColor: '#fff',
+        backgroundColor: '#fff'
       }}>
-      <View style={{marginTop: 20}}>
+      <View>
         <Text
           style={{
-            fontFamily: 'Inter-Bold',
+            fontFamily: 'InterBold',
             fontWeight: 'bold',
             fontSize: 30,
             color: '#20315f',
+            marginTop:100
           }}>
-          GAMEON
+          Welcome to Elfo App
         </Text>
+        <View style={{display:'flex', justifyContent: 'center', alignItems: 'center', marginTop:100}}>
+          <Image
+            alt="logo"
+            source={require('../../../assets/icon.png')}
+            style={{width:120,height:120, borderRadius:100}}
+          />
+        </View>
       </View>
-      <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-        <Gaming
-          width={300}
-          height={300}
-          style={{transform: [{rotate: '-15deg'}]}}
-        />
-      </View>
+
+      
       <TouchableOpacity
         style={{
           backgroundColor: '#AD40AF',
+          padding: 20,
+          width: '90%',
+          borderRadius: 10,
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+        }}
+        onPress={() => navigation.navigate('Login')}>
+        <Text
+          style={{
+            color: 'white',
+            fontSize: 18,
+            textAlign: 'center',
+            fontWeight: 'bold',
+            fontFamily: 'RobotoMediumItalic',
+          }}>
+          Webcam Model
+        </Text>
+        <MaterialIcons name="arrow-forward-ios" size={22} color="#fff" />
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={{
+          backgroundColor: 'black',
           padding: 20,
           width: '90%',
           borderRadius: 10,
@@ -48,14 +73,14 @@ const OnboardingScreen = ({navigation}) => {
             fontSize: 18,
             textAlign: 'center',
             fontWeight: 'bold',
-            fontFamily: 'Roboto-MediumItalic',
+            fontFamily: 'RobotoMediumItalic',
           }}>
-          Let's Begin
+          Couple
         </Text>
         <MaterialIcons name="arrow-forward-ios" size={22} color="#fff" />
       </TouchableOpacity>
     </SafeAreaView>
-  );
-};
+  )
+}
 
-export default OnboardingScreen;
+export default OnBoardScreen

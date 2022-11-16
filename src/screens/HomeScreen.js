@@ -38,7 +38,7 @@ export default function HomeScreen({navigation}) {
             justifyContent: 'space-between',
             marginBottom: 20,
           }}>
-          <Text style={{fontSize: 18, fontFamily: 'Roboto-Medium'}}>
+          <Text style={{fontSize: 18, fontFamily: 'RobotoMedium'}}>
             Hello Pablo!
           </Text>
           <TouchableOpacity onPress={() => navigation.openDrawer()}>
@@ -74,7 +74,7 @@ export default function HomeScreen({navigation}) {
             flexDirection: 'row',
             justifyContent: 'space-between',
           }}>
-          <Text style={{fontSize: 18, fontFamily: 'Roboto-Medium'}}>
+          <Text style={{fontSize: 18, fontFamily: 'RobotoMedium'}}>
             Upcoming Apps
           </Text>
           <TouchableOpacity onPress={() => {}}>

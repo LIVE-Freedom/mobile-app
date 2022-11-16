@@ -15,6 +15,8 @@ import GoogleSVG from '../../../assets/images/misc/google.svg';
 import FacebookSVG from '../../../assets/images/misc/facebook.svg';
 import TwitterSVG from '../../../assets/images/misc/twitter.svg';
 
+import SvgUri from 'react-native-svg-uri'; // SVG Package
+
 import CustomButton from '../../components/CustomButton';
 import InputField from '../../components/InputField';
 
@@ -23,10 +25,10 @@ const LoginScreen = ({navigation}) => {
     <SafeAreaView style={{flex: 1, justifyContent: 'center'}}>
       <View style={{paddingHorizontal: 25}}>
         <View style={{alignItems: 'center'}}>
-          <LoginSVG
-            height={300}
-            width={300}
-            style={{transform: [{rotate: '-5deg'}]}}
+          <SvgUri
+            height={"300"}
+            width={"300"}
+            svgXmlData={LoginSVG}
           />
         </View>
 
@@ -90,7 +92,11 @@ const LoginScreen = ({navigation}) => {
               paddingHorizontal: 30,
               paddingVertical: 10,
             }}>
-            <GoogleSVG height={24} width={24} />
+              <SvgUri
+                height={"24"}
+                width={"24"}
+                svgXmlData={GoogleSVG}
+              />
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => {}}
@@ -101,7 +107,11 @@ const LoginScreen = ({navigation}) => {
               paddingHorizontal: 30,
               paddingVertical: 10,
             }}>
-            <FacebookSVG height={24} width={24} />
+              <SvgUri
+                height={"24"}
+                width={"24"}
+                svgXmlData={FacebookSVG}
+              />
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => {}}
@@ -112,7 +122,11 @@ const LoginScreen = ({navigation}) => {
               paddingHorizontal: 30,
               paddingVertical: 10,
             }}>
-            <TwitterSVG height={24} width={24} />
+               <SvgUri
+                height={"24"}
+                width={"24"}
+                svgXmlData={TwitterSVG}
+              />
           </TouchableOpacity>
         </View>
 

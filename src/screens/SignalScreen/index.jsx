@@ -69,7 +69,7 @@ export default function SignalScreen({navigation}) {
             justifyContent: 'space-between',
             marginBottom: 20,
           }}>
-          <Text style={{fontSize: 18, fontFamily: 'Roboto-Medium'}}>
+          <Text style={{fontSize: 18, fontFamily: 'RobotoMedium'}}>
             Elfo Toys | Tips
           </Text>
           <TouchableOpacity onPress={() => navigation.openDrawer()}>
@@ -89,7 +89,7 @@ export default function SignalScreen({navigation}) {
             flexDirection: 'row',
             justifyContent: 'space-between',
           }}>
-          <Text style={{fontSize: 18, fontFamily: 'Roboto-Medium'}}>
+          <Text style={{fontSize: 18, fontFamily: 'RobotoMedium'}}>
             Last Events
           </Text>
 {/*           <TouchableOpacity onPress={() => {}}>

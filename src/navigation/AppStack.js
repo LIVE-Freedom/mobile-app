@@ -18,7 +18,7 @@ import AddNewAssetScreen from '../screens/AddNewAssetScreen';
 
 const Drawer = createDrawerNavigator();
 
-const AuthStack = () => {
+const AppStack = () => {
   return (
     <Drawer.Navigator
       drawerContent={props => <CustomDrawer {...props} />}
@@ -29,7 +29,7 @@ const AuthStack = () => {
         drawerInactiveTintColor: '#333',
         drawerLabelStyle: {
           marginLeft: -25,
-          fontFamily: 'Roboto-Medium',
+          fontFamily: 'RobotoMedium',
           fontSize: 15,
         },
       }}>
@@ -82,4 +82,4 @@ const AuthStack = () => {
   );
 };
 
-export default AuthStack;
+export default AppStack;

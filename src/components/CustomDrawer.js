@@ -31,7 +31,7 @@ const CustomDrawer = props => {
             style={{
               color: '#fff',
               fontSize: 18,
-              fontFamily: 'Roboto-Medium',
+              fontFamily: 'RobotoMedium',
               marginBottom: 5,
             }}>
             Pablo Guiacereza
@@ -40,7 +40,7 @@ const CustomDrawer = props => {
             <Text
               style={{
                 color: '#fff',
-                fontFamily: 'Roboto-Regular',
+                fontFamily: 'RobotoRegular',
                 marginRight: 5,
               }}>
               Tips in this session: 40
@@ -59,7 +59,7 @@ const CustomDrawer = props => {
             <Text
               style={{
                 fontSize: 15,
-                fontFamily: 'Roboto-Medium',
+                fontFamily: 'RobotoMedium',
                 marginLeft: 5,
               }}>
               Tell a Friend
@@ -73,7 +73,7 @@ const CustomDrawer = props => {
             <Text
               style={{
                 fontSize: 15,
-                fontFamily: 'Roboto-Medium',
+                fontFamily: 'RobotoMedium',
                 marginLeft: 5,
               }}>
               Sign Out

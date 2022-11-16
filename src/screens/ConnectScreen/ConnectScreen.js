@@ -43,7 +43,7 @@ export default function ConnectScreen({navigation}) {
             justifyContent: 'space-between',
             marginBottom: 20,
           }}>
-          <Text style={{fontSize: 18, fontFamily: 'Roboto-Medium'}}>
+          <Text style={{fontSize: 18, fontFamily: 'RobotoMedium'}}>
             Elfo Toys | Connect
           </Text>
           <TouchableOpacity onPress={() => navigation.openDrawer()}>
