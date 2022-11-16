@@ -37,7 +37,7 @@ export default function ListItem({photo, title, subTitle, isFree, price, onPress
         </View>
       </View>
 
-      <TouchableOpacity onPress={onPress} style={{
+     {/*  <TouchableOpacity onPress={onPress} style={{
         backgroundColor: (isFree == 'Yes' ? '#0aada8' : '#ab003c'),
         padding:10,
         width: 100,
@@ -52,7 +52,7 @@ export default function ListItem({photo, title, subTitle, isFree, price, onPress
           {isFree == 'Yes' && 'Buy'}
           {isFree == 'No' && 'Sell'}
         </Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
     </View>
   );
 }

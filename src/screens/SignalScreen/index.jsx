@@ -70,7 +70,7 @@ export default function SignalScreen({navigation}) {
             marginBottom: 20,
           }}>
           <Text style={{fontSize: 18, fontFamily: 'Roboto-Medium'}}>
-            Elfo Toys | Tip Events
+            Elfo Toys | Tips
           </Text>
           <TouchableOpacity onPress={() => navigation.openDrawer()}>
             <ImageBackground
@@ -90,14 +90,14 @@ export default function SignalScreen({navigation}) {
             justifyContent: 'space-between',
           }}>
           <Text style={{fontSize: 18, fontFamily: 'Roboto-Medium'}}>
-            Last Signals
+            Last Events
           </Text>
-          <TouchableOpacity onPress={() => {}}>
+{/*           <TouchableOpacity onPress={() => {}}>
             <Text style={{color: '#0aada8'}}>Show filters</Text>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View>
 
-        <View
+        {/* <View
           style={{
             flexDirection: 'row',
             borderColor: '#C6C6C6',
@@ -113,14 +113,14 @@ export default function SignalScreen({navigation}) {
             style={{marginRight: 5}}
           />
           <TextInput placeholder="Search Signal" />
-        </View>
+        </View> */}
 
 
         <View style={{marginVertical: 20}}>
           <CustomSwitchSignals
             selectionMode={1}
             option1="Chaturbate"
-            option2="Cam4"
+            option2="CAM4"
             onSelectSwitch={onSelectSwitch}
           />
         </View>
