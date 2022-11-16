@@ -7,6 +7,7 @@ import {
   ImageBackground,
   TextInput,
   TouchableOpacity,
+  Image,
 } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
 import Feather from 'react-native-vector-icons/Feather';
@@ -39,7 +40,7 @@ export default function CartScreen({navigation}) {
             marginBottom: 20,
           }}>
           <Text style={{fontSize: 18, fontFamily: 'Roboto-Medium'}}>
-            Hello John Doe
+            Connect Toy
           </Text>
           <TouchableOpacity onPress={() => navigation.openDrawer()}>
             <ImageBackground
@@ -50,49 +51,7 @@ export default function CartScreen({navigation}) {
           </TouchableOpacity>
         </View>
 
-        <View
-          style={{
-            flexDirection: 'row',
-            borderColor: '#C6C6C6',
-            borderWidth: 1,
-            borderRadius: 8,
-            paddingHorizontal: 10,
-            paddingVertical: 8,
-          }}>
-          <Feather
-            name="search"
-            size={20}
-            color="#C6C6C6"
-            style={{marginRight: 5}}
-          />
-          <TextInput placeholder="Search" />
-        </View>
-
-        <View
-          style={{
-            marginVertical: 15,
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-          }}>
-          <Text style={{fontSize: 18, fontFamily: 'Roboto-Medium'}}>
-            Upcoming Games
-          </Text>
-          <TouchableOpacity onPress={() => {}}>
-            <Text style={{color: '#0aada8'}}>See all</Text>
-          </TouchableOpacity>
-        </View>
-
-        <Carousel
-          ref={c => {
-            this._carousel = c;
-          }}
-          data={sliderData}
-          renderItem={renderBanner}
-          sliderWidth={windowWidth - 40}
-          itemWidth={300}
-          loop={true}
-        />
-
+       
         <View style={{marginVertical: 20}}>
           <CustomSwitch
             selectionMode={1}
@@ -102,7 +61,14 @@ export default function CartScreen({navigation}) {
           />
         </View>
 
-        {gamesTab == 1 &&
+        <View style={{justifyContent:'center', alignItems:'center', flexDirection:'column'}}>
+          <Image alt="qr" source={require('../../../assets/QR.png')} style={{width:250, height:250}}/>
+          <TouchableOpacity>
+            <Text style={{color:'white', backgroundColor:'#03CFB3', padding:10, borderRadius:50, fontWeight:'bold', marginVertical:100}}>Scan QR</Text>
+          </TouchableOpacity>
+        </View>
+
+        {/* {gamesTab == 1 &&
           freeGames.map(item => (
             <ListItem
               key={item.id}
@@ -134,7 +100,7 @@ export default function CartScreen({navigation}) {
                 })
               }
             />
-          ))}
+          ))} */}
       </ScrollView>
     </SafeAreaView>
   );
