@@ -34,7 +34,7 @@ const CustomDrawer = props => {
               fontFamily: 'Roboto-Medium',
               marginBottom: 5,
             }}>
-            Laura Ramirez
+            Pablo Guiacereza
           </Text>
           <View style={{flexDirection: 'row'}}>
             <Text

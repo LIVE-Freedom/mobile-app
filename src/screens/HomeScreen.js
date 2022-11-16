@@ -39,7 +39,7 @@ export default function HomeScreen({navigation}) {
             marginBottom: 20,
           }}>
           <Text style={{fontSize: 18, fontFamily: 'Roboto-Medium'}}>
-            Hello John Doe
+            Hello Pablo!
           </Text>
           <TouchableOpacity onPress={() => navigation.openDrawer()}>
             <ImageBackground
@@ -83,9 +83,9 @@ export default function HomeScreen({navigation}) {
         </View>
 
         <Carousel
-          ref={c => {
+       /*    ref={c => {
             this._carousel = c;
-          }}
+          }} */
           data={sliderData}
           renderItem={renderBanner}
           sliderWidth={windowWidth - 40}
@@ -96,8 +96,8 @@ export default function HomeScreen({navigation}) {
         <View style={{marginVertical: 20}}>
           <CustomSwitch
             selectionMode={1}
-            option1="Free to play"
-            option2="Paid games"
+            option1="Free"
+            option2="Paid"
             onSelectSwitch={onSelectSwitch}
           />
         </View>

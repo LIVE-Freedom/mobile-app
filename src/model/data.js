@@ -67,7 +67,7 @@ export const paidGames = [
 export const freeGames = [
   {
     poster: require('../../assets/images/Altos-Odyssey.jpeg'),
-    title: 'Altos Odyssey',
+    title: 'Carousel',
     subtitle: 'Noodlecake Studios',
     isFree: 'Yes',
     id: '1',

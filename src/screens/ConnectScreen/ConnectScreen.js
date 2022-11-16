@@ -44,7 +44,7 @@ export default function ConnectScreen({navigation}) {
             marginBottom: 20,
           }}>
           <Text style={{fontSize: 18, fontFamily: 'Roboto-Medium'}}>
-            Connect Toy
+            Elfo Toys | Connect
           </Text>
           <TouchableOpacity onPress={() => navigation.openDrawer()}>
             <ImageBackground
@@ -60,7 +60,7 @@ export default function ConnectScreen({navigation}) {
           <CustomSwitch
             selectionMode={1}
             option1="Bluetooth"
-            option2="Wifi"
+            option2="Extension"
             onSelectSwitch={onSelectSwitch}
           />
         </View>

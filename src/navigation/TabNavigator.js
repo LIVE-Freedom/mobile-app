@@ -85,7 +85,7 @@ const TabNavigator = () => {
           ),
       }}/>
       <Tab.Screen
-        name="Connect Toy"
+        name="Connect"
         component={ConnectScreen}
         options={{
           // tabBarBadge: 1,
